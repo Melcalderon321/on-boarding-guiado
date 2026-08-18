@@ -8,134 +8,166 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Driver.js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Selector de Perfil (Fuera del contenedor móvil) -->
-    <div class="profile-selector">
-        <button class="profile-btn active" id="btn-masivo">Usuario Masivo</button>
-        <button class="profile-btn" id="btn-operativo">Usuario Operativo</button>
-    </div>
 
-    <div class="mobile-container" id="app-container">
-        <header>
-            <div class="logo-container">
-                <div class="logo-text">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a0e9" stroke-width="3"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                    </svg>
-                    happ
-                </div>
-                <p style="font-size: 0.9rem; font-weight: 500; margin-top: 5px;">Hola Ignacio 👋</p>
-            </div>
-            <div class="header-actions">
-                <div class="help-btn" id="restart-tour" title="Reiniciar tutorial">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                    </svg>
-                    <div class="help-tooltip" id="help-tooltip">Accede al instructivo cuando quieras</div>
-                </div>
-                <div class="settings-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
-                        <circle cx="12" cy="12" r="3" />
-                    </svg>
-                </div>
-            </div>
-        </header>
 
-        <section id="results-operative-card" class="results-card">
-            <div class="results-icon-container">
-                <span class="new-badge">Nuevo</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a0e9" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <path d="m9 15 2 2 4-4"></path>
-                </svg>
-            </div>
-            <div class="results-info">
-                <h3>Resultados de operativo</h3>
-                <p>Tus resultados de salud ya están disponibles.</p>
-            </div>
-            <div class="results-arrow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </div>
-        </section>
+    <!-- Phone Mockup Container -->
+    <div class="phone-mockup">
+        <!-- Physical Side Buttons -->
+        <div class="phone-btn-left action-btn"></div>
+        <div class="phone-btn-left vol-up-btn"></div>
+        <div class="phone-btn-left vol-down-btn"></div>
+        <div class="phone-btn-right power-btn"></div>
 
-        <section class="hero-card">
-            <div class="hero-content">
-                <p style="font-size: 0.85rem; font-weight: 600; margin-bottom: 8px;">Sé parte de happ 😊</p>
-                <h2>Ellos ya disfrutan de los beneficios de happ. ¿Y tú? Ahorra y cuídate.</h2>
-                <div class="hero-stats">
-                    <div class="avatar-group">
-                        <img src="https://i.pravatar.cc/150?u=1" alt="User">
-                        <img src="https://i.pravatar.cc/150?u=2" alt="User">
-                        <img src="https://i.pravatar.cc/150?u=3" alt="User">
+        <!-- Phone Screen Glass -->
+        <div class="phone-screen" id="app-container">
+
+            <!-- iPhone Status Bar -->
+            <div class="status-bar">
+                <div class="status-time" id="status-clock">09:41</div>
+                <div class="dynamic-island">
+                    <div class="island-camera"></div>
+                    <div class="island-sensor"></div>
+                </div>
+                <div class="status-icons">
+                    <!-- Signal -->
+                    <svg class="status-icon" width="16" height="12" viewBox="0 0 16 12" fill="currentColor">
+                        <rect x="0" y="8" width="2.5" height="4" rx="0.5"/>
+                        <rect x="4" y="5.5" width="2.5" height="6.5" rx="0.5"/>
+                        <rect x="8" y="3" width="2.5" height="9" rx="0.5"/>
+                        <rect x="12" y="0.5" width="2.5" height="11.5" rx="0.5"/>
+                    </svg>
+                    <!-- Wifi -->
+                    <svg class="status-icon" width="15" height="12" viewBox="0 0 16 12" fill="currentColor">
+                        <path d="M8 9.5C8.8 9.5 9.5 8.8 9.5 8C9.5 7.2 8.8 6.5 8 6.5C7.2 6.5 6.5 7.2 6.5 8C6.5 8.8 7.2 9.5 8 9.5Z" />
+                        <path d="M8 3.5C10.2 3.5 12.2 4.4 13.7 5.9L15.1 4.5C13.2 2.6 10.7 1.5 8 1.5C5.3 1.5 2.8 2.6 0.9 4.5L2.3 5.9C3.8 4.4 5.8 3.5 8 3.5Z" />
+                        <path d="M8 0C11.3 0 14.3 1.3 16.5 3.5L15.1 4.9C13.2 3 10.7 1.8 8 1.8C5.3 1.8 2.8 3 0.9 4.9L-0.5 3.5C1.7 1.3 4.7 0 8 0Z" />
+                    </svg>
+                    <!-- Battery -->
+                    <div class="battery-icon">
+                        <div class="battery-level"></div>
                     </div>
-                    <p style="font-size: 0.75rem; font-weight: 600;">30.000+ <span
-                            style="font-weight: 400; opacity: 0.9;">Ellos ya son parte</span></p>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/banner.png" alt="Happ Banner">
-            </div>
-        </section>
 
-        <div class="carousel-dots">
-            <div class="dot active"></div>
-            <div class="dot small"></div>
+            <!-- Mobile App Content -->
+            <div class="mobile-container">
+                <header>
+                    <div class="user-greeting-container">
+                        <h1 class="user-greeting">Hola Ignacio 👋</h1>
+                    </div>
+                    <div class="header-actions">
+                        <div class="help-btn" id="restart-tour" title="Reiniciar tutorial">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            <div class="help-tooltip" id="help-tooltip">Accede al instructivo cuando quieras</div>
+                        </div>
+                        <div class="settings-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </div>
+                    </div>
+                </header>
+
+                <section id="results-operative-card" class="results-card">
+                    <div class="results-icon-container">
+                        <span class="new-badge">Nuevo</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a0e9" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <path d="m9 15 2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <div class="results-info">
+                        <h3>Resultados de operativo</h3>
+                        <p>Tus resultados de salud ya están disponibles.</p>
+                    </div>
+                    <div class="results-arrow">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </section>
+
+                <section class="hero-card">
+                    <div class="hero-content">
+                        <div class="hero-brand">
+                            <img src="assets/logo_happ.png" alt="Happ - Tu salud en tu mano" class="hero-logo-img">
+                        </div>
+                        <h2 class="hero-headline">Descubre lo que hacemos por ti</h2>
+                        <a href="#" class="hero-link">Ver más</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/doctor_user.png" alt="Doctor Happ">
+                    </div>
+                </section>
+
+                <div class="carousel-dots">
+                    <div class="dot active"></div>
+                    <div class="dot small"></div>
+                </div>
+
+                <main class="main-actions">
+                    <!-- TARGET CARD FOR DRIVER.JS -->
+                    <div class="action-card" id="upload-recipe-card">
+                        <img src="assets/receta.png" alt="Receta" style="width: 52px; height: 52px; object-fit: contain;">
+                        <span>Cotizar medicamentos</span>
+                    </div>
+                    <div class="action-card" id="upload-exam-card">
+                        <img src="assets/examen.png" alt="Examen" style="width: 52px; height: 52px; object-fit: contain;">
+                        <span>Mis resultados</span>
+                    </div>
+                </main>
+
+                <div class="action-card" id="assistant-card" style="width: 100%; margin-top: 12px;">
+                    <img src="assets/asistente.png" alt="Asistente" style="width: 52px; height: 52px; object-fit: contain;">
+                    <span>Asistente Happ</span>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation inside Screen -->
+            <nav class="bottom-nav">
+                <div class="nav-item active">
+                    <img src="assets/home.jpg" alt="Home" class="nav-icon-img">
+                    <span>Home</span>
+                </div>
+                <div class="nav-item" id="nav-docs">
+                    <img src="assets/docs.png" alt="Docs" class="nav-icon-img">
+                    <span>Documentos</span>
+                </div>
+                <div class="nav-item" id="nav-health">
+                    <img src="assets/salud.png" alt="Salud" class="nav-icon-img">
+                    <span>Mi salud</span>
+                </div>
+                <div class="nav-item">
+                    <img src="assets/ia.png" alt="Happ IA" class="nav-icon-img">
+                    <span>Happ IA</span>
+                </div>
+                <!-- iOS Home Bar Indicator -->
+                <div class="home-indicator"></div>
+            </nav>
+
+            <!-- Floating Robot Assistant Bot -->
+            <div class="floating-bot-widget" id="floating-bot" title="Asistente Happ">
+                <img src="assets/floating_bot.png" alt="Bot Happ Assistant" class="floating-bot-img">
+            </div>
         </div>
-
-        <main class="main-actions">
-            <!-- TARGET CARD FOR DRIVER.JS -->
-            <div class="action-card" id="upload-recipe-card">
-                <img src="assets/receta.png" alt="Receta" style="width: 80px; height: 80px; object-fit: contain;">
-                <span>Sube tu receta</span>
-            </div>
-            <div class="action-card" id="upload-exam-card">
-                <img src="assets/examen.png" alt="Examen" style="width: 80px; height: 80px; object-fit: contain;">
-                <span>Sube tu examen</span>
-            </div>
-        </main>
-
-        <div class="action-card" id="assistant-card" style="width: 100%; margin-top: 15px;">
-            <img src="assets/asistente.png" alt="Asistente" style="width: 80px; height: 80px; object-fit: contain;">
-            <span>Asistente Happ</span>
-        </div>
-
-        <nav class="bottom-nav">
-            <div class="nav-item active">
-                <img src="assets/home.jpg" alt="Home" class="nav-icon-img">
-                <span>Home</span>
-            </div>
-            <div class="nav-item" id="nav-docs">
-                <img src="assets/docs.png" alt="Docs" class="nav-icon-img">
-                <span>Documentos</span>
-            </div>
-            <div class="nav-item" id="nav-health">
-                <img src="assets/salud.png" alt="Salud" class="nav-icon-img">
-                <span>Mi salud</span>
-            </div>
-            <div class="nav-item">
-                <img src="assets/ia.png" alt="Happ IA" class="nav-icon-img">
-                <span>Happ IA</span>
-            </div>
-        </nav>
     </div>
 
 
@@ -151,8 +183,8 @@
                 {
                     element: '#upload-recipe-card',
                     popover: {
-                        title: '💊 ¡Ahorra en remedios!',
-                        description: 'Sube tu receta y buscamos al tiro el precio más bajo en todas las farmacias. 🛒✨',
+                        title: '📌 ¡Ahorra en remedios!',
+                        description: 'Aquí puedes cotizar y buscar la opción más barata en muchas farmacias 🛒 📉',
                         side: "bottom",
                         align: 'center'
                     }
@@ -160,26 +192,26 @@
                 {
                     element: '#upload-exam-card',
                     popover: {
-                        title: '🩺 ¡Exámenes en simple!',
-                        description: 'Sube tus exámenes y entiende tus resultados en segundos, sin enredos. 💡📈',
+                        title: '🩺 ¡Salud en simple!',
+                        description: 'Revisa tus resultados, sube exámenes y sigue tu evolución sin enredos. ¡Tu bienestar es prioridad! 📊',
                         side: "bottom",
                         align: 'center'
                     }
                 },
                 {
-                    element: '#assistant-card',
+                    element: '#floating-bot',
                     popover: {
-                        title: '🚀 ¡Saca el máximo provecho!',
-                        description: 'Te ayudamos a entender tu cobertura para que nunca pagues de más. ✨🤝',
+                        title: '🚀 ¡Saca el máximo provecho a tu plan!',
+                        description: 'Te ayudamos a entender tu cobertura de salud para que nunca pagues de más.',
                         side: "top",
-                        align: 'center'
+                        align: 'end'
                     }
                 },
                 {
                     element: '#nav-docs',
                     popover: {
-                        title: '📂 Todo en un lugar',
-                        description: 'Tu carpeta médica digital, ordenada y segura. Todo a un clic. ✅',
+                        title: '📁 Todo en un lugar',
+                        description: 'Tu carpeta medica digital, ordenada y segura. Todo en un clic.',
                         side: "top",
                         align: 'center'
                     }
@@ -224,6 +256,7 @@
             const driver = window.driver.js.driver({
                 allowClose: true,
                 popoverOffset: 12,
+                popoverClass: 'happ-pro-popover',
                 onDestroyed: () => {
                     // Mostrar la card al cerrar el modal
                     document.getElementById('results-operative-card').classList.add('visible');
@@ -261,6 +294,7 @@
                 allowClose: true,
                 stagePadding: 8,
                 popoverOffset: 12,
+                popoverClass: 'happ-pro-popover',
                 nextBtnText: 'Siguiente',
                 prevBtnText: 'Anterior',
                 doneBtnText: profile === 'masivo' ? 'Listo' : 'Ver resultados',
@@ -311,29 +345,20 @@
             driverObj.drive();
         });
 
-        // Profile Selection Logic
-        const btnMasivo = document.getElementById('btn-masivo');
-        const btnOperativo = document.getElementById('btn-operativo');
-        const appContainer = document.getElementById('app-container');
 
-        btnMasivo.addEventListener('click', () => {
-            currentProfile = 'masivo';
-            btnMasivo.classList.add('active');
-            btnOperativo.classList.remove('active');
-            document.getElementById('results-operative-card').classList.remove('visible');
-            driverObj = configDriver(currentProfile);
-            driverObj.drive(); // Iniciar tutorial inmediatamente
-            console.log("Cambiado a Usuario Masivo");
-        });
 
-        btnOperativo.addEventListener('click', () => {
-            currentProfile = 'operativo';
-            btnOperativo.classList.add('active');
-            btnMasivo.classList.remove('active');
-            driverObj = configDriver(currentProfile);
-            driverObj.drive(); // Iniciar tutorial inmediatamente
-            console.log("Cambiado a Usuario Operativo");
-        });
+        // Actualizar reloj de la barra de estado
+        const updateClock = () => {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const clockEl = document.getElementById('status-clock');
+            if (clockEl) {
+                clockEl.textContent = `${hours}:${minutes}`;
+            }
+        };
+        updateClock();
+        setInterval(updateClock, 10000);
     </script>
 </body>
 
