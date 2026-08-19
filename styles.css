@@ -973,10 +973,11 @@ header {
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
     border: 1px solid rgba(255, 255, 255, 0.9) !important;
-    border-radius: 12px !important;
+    border-radius: 16px !important;
     padding: 18px 20px !important;
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18), 0 4px 12px rgba(0, 0, 0, 0.05) !important;
-    max-width: 290px !important;
+    min-width: 310px !important;
+    max-width: 335px !important;
     font-family: 'Inter', sans-serif !important;
     z-index: 100000 !important;
 }
@@ -1002,31 +1003,46 @@ header {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    gap: 10px !important;
     margin-top: 12px !important;
-    padding-top: 10px !important;
+    padding-top: 12px !important;
     border-top: 1px solid #f1f5f9 !important;
 }
 
 .happ-pro-popover .driver-popover-progress-text {
-    font-size: 0.75rem !important;
+    font-size: 0.78rem !important;
     font-weight: 600 !important;
     color: #1d4ed8 !important;
     background: #eff6ff !important;
-    padding: 4px 10px !important;
+    padding: 6px 12px !important;
     border-radius: 20px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+.happ-pro-popover .driver-popover-navigation-btns {
+    display: flex !important;
+    gap: 8px !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
 }
 
 .happ-pro-popover .driver-popover-prev-btn {
     background: #f1f5f9 !important;
     color: #475569 !important;
-    font-size: 0.8rem !important;
+    font-size: 0.82rem !important;
     font-weight: 600 !important;
     border: none !important;
     border-radius: 10px !important;
-    padding: 7px 14px !important;
+    padding: 8px 14px !important;
+    height: 36px !important;
     cursor: pointer !important;
     transition: all 0.2s !important;
     text-shadow: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .happ-pro-popover .driver-popover-prev-btn:hover {
@@ -1037,15 +1053,20 @@ header {
 .happ-pro-popover .driver-popover-next-btn {
     background: linear-gradient(135deg, #0f62fe 0%, #0043ce 100%) !important;
     color: #ffffff !important;
-    font-size: 0.8rem !important;
+    font-size: 0.82rem !important;
     font-weight: 600 !important;
     border: none !important;
     border-radius: 10px !important;
-    padding: 7px 16px !important;
+    padding: 8px 16px !important;
+    height: 36px !important;
     cursor: pointer !important;
     box-shadow: 0 4px 12px rgba(15, 98, 254, 0.3) !important;
     transition: all 0.2s !important;
     text-shadow: none !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .happ-pro-popover .driver-popover-next-btn:hover {

@@ -206,15 +206,6 @@
                         side: "top",
                         align: 'end'
                     }
-                },
-                {
-                    element: '#nav-docs',
-                    popover: {
-                        title: '📁 Todo en un lugar',
-                        description: 'Tu carpeta medica digital, ordenada y segura. Todo en un clic.',
-                        side: "top",
-                        align: 'center'
-                    }
                 }
             ];
 
@@ -223,7 +214,8 @@
                     title: '¡Ya estás listo! 🎉',
                     description: 'Disfruta de una salud más inteligente, eficiente y accesible. ¡Bienvenido a Happ! 🚀',
                     side: "top",
-                    align: 'center'
+                    align: 'center',
+                    doneBtnText: 'Cotizar ahora'
                 }
             };
 
@@ -288,7 +280,7 @@
                 popoverClass: 'happ-pro-popover',
                 nextBtnText: 'Siguiente',
                 prevBtnText: 'Anterior',
-                doneBtnText: profile === 'masivo' ? 'Listo' : 'Ver resultados',
+                doneBtnText: profile === 'masivo' ? 'Cotizar ahora' : 'Ver resultados',
                 onHighlightStarted: (element, step, { state }) => {
                     // Si llegamos al último paso, marcamos como finalizado
                     if (state.activeIndex === getSteps(profile).length - 1) {
